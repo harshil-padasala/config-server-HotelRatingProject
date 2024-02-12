@@ -1,0 +1,17 @@
+server:
+  port: 8085
+spring:
+  application:
+    name: CONFIG-SERVER
+
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/harshil-padasala/config-profiles-HotelRatingProject
+          clone-on-start: true
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl.defaultZone: http://service-registry:8761/eureka
